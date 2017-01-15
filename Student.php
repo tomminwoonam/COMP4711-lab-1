@@ -8,6 +8,7 @@
 class Student
 {
 
+    //the student constructor
     function __construct()
     {
         $this->surname = '';
@@ -16,16 +17,19 @@ class Student
         $this->grades = array();
     }
 
+    //the function to add emails to the email array
     function add_email($which,$address)
     {
         $this->emails[$which] = $address;
     }
 
+    //the function to add grades to the grades array
     function add_grade($grade)
     {
         $this->grades[] = $grade;
     }
 
+    //the function to calculate the average of the student
     function average()
     {
         $total = 0;
@@ -34,6 +38,7 @@ class Student
         return $total / count($this->grades);
     }
 
+    //the function to return a presentable representation of the student data
     function toString()
     {
         $result = '<h3>' . $this->first_name . ' ' . $this->surname;

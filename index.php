@@ -13,8 +13,10 @@
          */
         include('Student.php');
 
+        //create array to store students
         $students = array();
 
+        //create first student
         $first = new Student();
         $first->surname = "Doe";
         $first->first_name = "John";
@@ -25,6 +27,7 @@
         $first->add_grade(55);
         $students['j123'] = $first;
 
+        //create second student
         $second = new Student();
         $second->surname = "Einstein";
         $second->first_name = "Albert";
@@ -36,6 +39,7 @@
         $second->add_grade(50);
         $students['a456'] = $second;
 
+        //create third student
         $third = new Student();
         $third->surname = "Nam";
         $third->first_name = "Tom";
@@ -43,8 +47,10 @@
         $third->add_grade(85);
         $students['t123'] = $third;
 
+        //sort student array
         ksort($students); // one of the many sort functions
 
+        //display each student in the array
         foreach($students as $student)
             echo $student->toString();
 
